@@ -66,9 +66,9 @@ Next add this line to your `/etc/hosts` file:
 
 Now you should be able to access application in your browser via url: [foo.bar.com](http://foo.bar.com/)
 
-### Usefull debuggign stuff
+### Usefull debugging stuff
 
-**STILL IN PROGRESS**
+**This part is still in progress**
 
 At the beginning I had issues with application pod failing because of incorrect or simply not set environment variables.
 To debug this in application deployment yml under `spec: containers:` add couple lines for pod to sleep for some time before crashing:

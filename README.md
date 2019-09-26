@@ -41,14 +41,14 @@ Next step is Helm, so run:
 helm init
 ```
 
-## Deployment
+### Deployment
 
 Now you can deploy an application by running:
 ```
 helm install app/
 ```
 
-Please note that application is dependent on Redis so "app" pod can fail at the beginning if Redis pod is still not ready. So be patient for couple seconds :)
+Please note that application is dependent on Redis, so at the beginning "app" pod can fail if Redis pod is still not ready. So be patient for couple seconds.
 
 Next is to make app accessible via browser. To do this first you can run:
 ```
@@ -65,3 +65,26 @@ Next add this line to your `/etc/hosts` file:
 ```
 
 Now you should be able to access application in your browser via url: [foo.bar.com](http://foo.bar.com/)
+
+### Usefull debuggign stuff
+
+**STILL IN PROGRESS**
+
+At the beginning I had issues with application pod failing because of incorrect or simply not set environment variables.
+To debug this in application deployment yml under `spec: containers:` add couple lines for pod to sleep for some time before crashing:
+```
+command:
+- sleep
+- "3600"
+```
+
+Now you can log in to pod:
+```
+kubectl exec -it [your pod name] -- /bin/sh
+```
+
+And for example check environment variables by simply entering:
+```
+env
+```
+

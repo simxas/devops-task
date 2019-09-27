@@ -10,7 +10,7 @@ This repo contains two branches:
 
 First one (*helmless*) contains only deployment files. So you can deploy them on your kubernetes cluster manually with `kubectl` command or by running `minikube dashboard` and using Kubernetes GUI.
 
-Second branch (*helmful*) is for Helm Chart (prefered way).
+Second branch (*helmful*) is for Helm Chart (preferred way).
 
 ### Prerequisites
 
@@ -20,7 +20,7 @@ Please note that there seems to be a bug with setting up tiller for k8s version 
 `Error: error installing: the server could not find the requested resource`. More info regarding this problem can be found here: https://github.com/helm/helm/issues/6374
 So please use older Minikube versions.
 
-Required application image is already built and hosted on *Docker Hub*.
+Required application image is already built and hosted on **Docker Hub**.
 
 ### Installing
 

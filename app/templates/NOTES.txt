@@ -1,0 +1,8 @@
+1. Get the application URL by running these commands:
+minikube ip
+Now you have a required IP.
+
+2. edit your /etc/hosts file by adding this line:
+[IP you got from previous command] {{ .Values.ingress.host }}
+
+3. use curl or enter in your browser {{ .Values.ingress.host }} to access application.

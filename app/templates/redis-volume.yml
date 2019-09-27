@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: {{ .Values.redis.name }}
+  labels:
+    type: local
+spec:
+  storageClassName: manual
+  capacity:
+    storage: {{ .Values.redis.storage }}
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: {{ .Values.redis.path }}

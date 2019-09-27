@@ -1,0 +1,18 @@
+redis:
+  name: redis
+  image: redis:5.0.5-alpine
+  port: 6379
+  password: dmVyeXNlY3VyZXBhc3N3b3JkCg==
+  storage: 1Gi
+  path: /data
+
+app:
+  name: app
+  image: genericsimon/devops-task:latest
+  port: 3000
+
+ingress:
+  name: app-ingress
+  host: foo.bar.com
+  port: 80
+  path: /

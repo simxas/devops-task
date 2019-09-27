@@ -8,9 +8,9 @@ This repo contains two branches:
 * helmless
 * helmful
 
-First one (helmless) contains only deployment files. So you can deploy them on your kubernetes cluster manually with `kubectl` command or by running `minikube dashboard` and using Kubernetes GUI.
+First one (*helmless*) contains only deployment files. So you can deploy them on your kubernetes cluster manually with `kubectl` command or by running `minikube dashboard` and using Kubernetes GUI.
 
-Second branch (helmful) is for Helm Chart (Prefered way).
+Second branch (*helmful*) is for Helm Chart (prefered way).
 
 ### Prerequisites
 
@@ -20,11 +20,11 @@ Please note that there seems to be a bug with setting up tiller for k8s version 
 `Error: error installing: the server could not find the requested resource`. More info regarding this problem can be found here: https://github.com/helm/helm/issues/6374
 So please use older Minikube versions.
 
-Required application image is already built and hosted on Docker Hub.
+Required application image is already built and hosted on *Docker Hub*.
 
 ### Installing
 
-Rest of this Readme file is for `helmful` branch.
+Rest of this Readme file is for *helmful* branch.
 
 To start deploying application via Helm first you need to start Minikube by running:
 ```
@@ -43,7 +43,7 @@ helm init
 
 ### Deployment
 
-Now you can deploy an application by running:
+Now you can deploy this application by running:
 ```
 helm install app/
 ```
@@ -66,7 +66,7 @@ Next add this line to your `/etc/hosts` file:
 
 Now you should be able to access application in your browser via url: [foo.bar.com](http://foo.bar.com/)
 
-### Usefull debugging stuff
+### Usefull debugging stuff and issues I had
 
 **This part is still in progress**
 
